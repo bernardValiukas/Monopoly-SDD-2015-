@@ -1,0 +1,132 @@
+/*
+monopoly documentation
+
+25/06/2015
+ethan - helped design ascii
+jackson - started start menu
+amelia - card ascii begun
+
+26/06/2015
+jackson - organised objects into different files + established constructor for player
+amelia - opening screen ascii (monopoly man)
+ethan - no attendance
+*/
+/* -- BEGINNING OF MONOPOLY -- */
+
+#include <cstdlib> 
+#include <iostream>
+#include <ctime>
+#include <string>
+#include <windows.h> // FOR CORRECT RANDOMISATION (Dice wouldn't randomise properly without).
+
+using namespace std;
+
+void monopolyHeading()
+{
+	cout << "--------------------------------------------------------------------------------" << endl;
+	cout << "                                 == MONOPOLY ==                                 " << endl;
+	cout << "--------------------------------------------------------------------------------" << endl;
+}
+
+int playerNumbers(int playerNum)
+{
+	playerNum = 0;
+	
+	for ( ; ; ) // NUMBER OF PLAYERS
+    {
+	    cout << "Enter the number of players (2-6): ";  // Outout prompt for number of players.
+		cin >> playerNum; // Takes users input.
+		
+		if ((playerNum >=2) && (playerNum <= 6))
+		{
+			cout << "You have entered " << playerNum << " players!" << endl;
+			system("PAUSE");
+			break;
+		}
+		
+		else
+		{
+			cout << "Invalid input!" << endl;
+		}
+		return playerNum; // Returns the number of players. 
+	}	
+}
+
+string playerNames(int playerNum, int nameLength, string playerName)
+{
+	system("CLS");
+	monopolyHeading();
+				
+	playerNum;
+	nameLength = 10;
+	playerName; 
+		
+	for (int j = 1 ; j <= playerNum ; j++)
+	{
+	    cout << "Player " << j << ", please enter your name: ";
+		cin >> playerName;
+		
+		if (playerName.length > nameLength)
+		{
+			cout << "Sorry, name entered is too long. Try again.";
+		}
+			
+		else
+		{
+			break;
+		}
+		return playerName;
+	}	
+} 
+
+int main(int argc, char *argv[])
+{
+    //int playerNum = 0; // Holds the amount of players in the game. 
+	char check; // checks that the amount entered was correct.
+	int playerNum = 0;
+	cout << "--------------------------------------------------------------------------------" << endl;
+	cout << "..##.....##..#######..##....##..#######..########...#######..##.......##....##." << endl;
+    cout << "..###...###.##.....##.###...##.##.....##.##.....##.##.....##.##........##..##.." << endl; 
+	cout << "..####.####.##.....##.####..##.##.....##.##.....##.##.....##.##.........####..." << endl;
+	cout << "..##.###.##.##.....##.##.##.##.##.....##.########..##.....##.##..........##...." << endl;  //Title ASCII
+	cout << "..##.....##.##.....##.##..####.##.....##.##........##.....##.##..........##...." << endl;
+	cout << "..##.....##.##.....##.##...###.##.....##.##........##.....##.##..........##...." << endl;
+	cout << "..##.....##..#######..##....##..#######..##.........#######..########....##...." << endl << endl;
+	cout << "--------------------------------------------------------------------------------" << endl;
+	cout << "  BEGIN GAME (B)                       |                         EXIT GAME (E)  " << endl; // Directs user to choose option. 
+	cout << "--------------------------------------------------------------------------------";         
+	
+	for ( ; ; ) // BEGIN GAME OR EXIT
+    {
+    	cout << "  Enter selection (B or E): "; // Prompt for user input. 
+    	char selection; // Allows user to input a character selection.
+	    cin >> selection; // Takes in players selection.
+        
+	    if ((selection == 'b') || (selection == 'B')) // If 'b' or 'B' was selected.
+		{
+	    	break; // It will break the loop and continue down to the player selection.
+		}
+		
+		else if ((selection == 'e') || (selection == 'E')) // If 'e' or 'E' was selected
+		{
+	        system("PAUSE");
+            return EXIT_SUCCESS; // Exits the program. 
+		}
+		
+		else // If the entered selection was invalid.
+		{
+			// Enter selection again.
+		}
+    }
+	
+	system("CLS");
+	cout << "--------------------------------------------------------------------------------" << endl;
+	cout << "                            ==  PLAYER SELECTION ==                             " << endl;
+	cout << "--------------------------------------------------------------------------------" << endl;
+	
+	cout << "Player Names: " << endl;
+	playerNames(playerNum);
+	
+	system("PAUSE"); // Pauses the console.
+	return 0; // Returns 0.
+}

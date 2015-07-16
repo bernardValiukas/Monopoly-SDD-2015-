@@ -43,6 +43,6 @@ Jackson:
  - Board class functions made to access private variables made.
  - Start menu implemented as well as monopoly header function. 
 
-4/06/15
+4/06/15  //do you mean 4/07/2015? -amelia
 Jackson:
  - Roll is able to be rolled and print on screen where player has been moved to (movePlayer function.

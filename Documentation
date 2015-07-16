@@ -1,11 +1,36 @@
+DOCUMENTATION -
+
+Roles:
+ - Jackson: head programmer
+ - Ethan: assistant programmer
+ - Amelia: ascii, documentation
+
+Planning:
+Week 1: 
+ - planning and design. 
+ - organisation of group roles. 
+
+Week 2:
+ - begin property , community chest and chance cards ascii
+ - player select functions
+
+Week 3:
+ - start menu 
+ - dice roll functions
+
+Week 4: 
+ - card ascii completed
+ - begin main programming
+
+
+Work log:
 25/06/2015
-ethan - helped design ascii
-jackson - started start menu
-amelia - card ascii begun
+Ethan + Jackson: start menu to begin game
+Amelia: property card ascii begun
 
 26/06/2015
-jackson - organised objects into different files + established constructor for player
-amelia - opening screen ascii (monopoly man)
-ethan - no attendance
-*/
-/* -- BEGINNING OF MONOPOLY -- */
+Jackson: organised objects into different files + established constructor for player.
+Amelia: start menu 
+
+*1st monday holidays*/06/2015
+Jackson:  

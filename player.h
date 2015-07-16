@@ -6,6 +6,7 @@ class Player
 {
 	public:																				//public functions of Player - use to change or view private variables
 		Player();																		//constructor for player attributes
+		void setBalance(int playerBalance);												//set balance for player
 		int getBalance();																//access balance for player
 		void setName(string playerName);												//set name of player
 		string getName();																//access name of player

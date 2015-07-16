@@ -11,6 +11,10 @@ Player::Player() 																		//creates preset values for player attributes
 	doublesRolled = 0;
 }
 
+void Player::setBalance(int playerBalance)
+{
+	balance = playerBalance;
+}
 int Player::getBalance() 																//access balance
 {
 	return balance;
@@ -50,4 +54,13 @@ int Player::getDoublesRolled()															//access number of doubles rolled f
 {
 	return doublesRolled;
 }
+
+
+
+
+
+
+
+
+
 

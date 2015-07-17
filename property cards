@@ -1,58 +1,49 @@
 // not in board order needs sorting
 
-//YELLOW
-cout << "|---------------------------|" << endl;
-cout << "|        TITLE DEED         |" << endl;
-cout << "|     COVENTRTY STREET      |" << endl;
-cout << "|---------------------------|" << endl;
-cout << "| Rent                  $22 |" << endl;
-cout << "| Rent with colour set  $44 |" << endl;
-cout << "| Rent with [1]        $110 |" << endl;
-cout << "| Rent with [2]        $330 |" << endl;
-cout << "| Rent with [3]        $800 |" << endl;
-cout << "| Rent with [4]        $975 |" << endl;
-cout << "| Rent with hotel     $1150 |" << endl;
-cout << "|---------------------------|" << endl;
-cout << "| Houses cost     $150 each |" << endl;
-cout << "| Hotels cost     $150 each |" << endl;
-cout << "|           (plus 4 houses) |" << endl;
-cout << "|---------------------------|" << endl;
+if (board[i].getName() == "Coventry Street")
+{
+    //YELLOW
+    cout << "|---------------------------|" << endl;
+    cout << "|        TITLE DEED         |" << endl;
+    cout << "|     COVENTRTY STREET      |" << endl;
+    cout << "|---------------------------|" << endl;
+    cout << "| Rent                  $22 |" << endl;
+    cout << "| Rent with colour set  $44 |" << endl;
+    cout << "| Rent with [1]        $110 |" << endl;
+    cout << "| Rent with [2]        $330 |" << endl;
+    cout << "| Rent with [3]        $800 |" << endl;
+    cout << "| Rent with [4]        $975 |" << endl;
+    cout << "| Rent with hotel     $1150 |" << endl;
+    cout << "|---------------------------|" << endl;
+    cout << "| Houses cost     $150 each |" << endl;
+    cout << "| Hotels cost     $150 each |" << endl;
+    cout << "|           (plus 4 houses) |" << endl;
+    cout << "|---------------------------|" << endl;
+}
 
-//YELLOW
-cout << "|---------------------------|" << endl;
-cout << "|        TITLE DEED         |" << endl;
-cout << "|        PICCADILLY         |" << endl;
-cout << "|---------------------------|" << endl;
-cout << "| Rent                  $24 |" << endl;
-cout << "| Rent with colour set  $48 |" << endl;
-cout << "| Rent with [1]        $120 |" << endl;
-cout << "| Rent with [2]        $360 |" << endl;
-cout << "| Rent with [3]        $850 |" << endl;
-cout << "| Rent with [4]       $1025 |" << endl;
-cout << "| Rent with hotel     $1200 |" << endl;
-cout << "|---------------------------|" << endl;
-cout << "| Houses cost     $150 each |" << endl;
-cout << "| Hotels cost     $150 each |" << endl;
-cout << "|           (plus 4 houses) |" << endl;
-cout << "|---------------------------|" << endl;
+if (board.[i].getName() == "Piccadilly")
+{
+    //YELLOW
+    cout << "|---------------------------|" << endl;
+    cout << "|        TITLE DEED         |" << endl;
+    cout << "|        PICCADILLY         |" << endl;
+    cout << "|---------------------------|" << endl;
+    cout << "| Rent                  $24 |" << endl;
+    cout << "| Rent with colour set  $48 |" << endl;
+    cout << "| Rent with [1]        $120 |" << endl;
+    cout << "| Rent with [2]        $360 |" << endl;
+    cout << "| Rent with [3]        $850 |" << endl;
+    cout << "| Rent with [4]       $1025 |" << endl;
+    cout << "| Rent with hotel     $1200 |" << endl;
+    cout << "|---------------------------|" << endl;
+    cout << "| Houses cost     $150 each |" << endl;
+    cout << "| Hotels cost     $150 each |" << endl;
+    cout << "|           (plus 4 houses) |" << endl;
+    cout << "|---------------------------|" << endl;
+}
 
-// UTILITY
-cout << "|---------------------------|" << endl;
-cout << "|         [======]	     |" << endl;
-cout << "|    	      ||             |" << endl;
-cout << "|     |]____/  \____        |" << endl;
-cout << "|     ||_____==___  \	     |" << endl;
-cout << "|     |]          |_|       |" << endl;
-cout << "|       	             |" << endl;
-cout << "|       WATER WORKS         |" << endl;
-cout << "|  If one Utility is owned  |" << endl;
-cout << "|   rent is 4 times amount  |" << endl;
-cout << "|      shown on dice.       |" << endl;
-cout << "|                           |" << endl;
-cout << "|   If both Utilities are   |" << endl;
-cout << "|  owned, rent is 10 times  |" << endl;
-cout << "|   amount shown on dice.   |" << endl;
-cout << "|---------------------------|" << endl;
+
+
 
 // BROWN
 cout << "|---------------------------|" << endl;
@@ -299,6 +290,24 @@ cout << "|       ,'____   ,'         |" << endl;
 cout << "|            / ,'           |" << endl;
 cout << "|           /.'	           |" << endl;
 cout << "|      ELECTRIC COMPANY     |" << endl;
+cout << "|  If one Utility is owned  |" << endl;
+cout << "|   rent is 4 times amount  |" << endl;
+cout << "|      shown on dice.       |" << endl;
+cout << "|                           |" << endl;
+cout << "|   If both Utilities are   |" << endl;
+cout << "|  owned, rent is 10 times  |" << endl;
+cout << "|   amount shown on dice.   |" << endl;
+cout << "|---------------------------|" << endl;
+
+// UTILITY
+cout << "|---------------------------|" << endl;
+cout << "|         [======]	     |" << endl;
+cout << "|    	      ||             |" << endl;
+cout << "|     |]____/  \____        |" << endl;
+cout << "|     ||_____==___  \	     |" << endl;
+cout << "|     |]          |_|       |" << endl;
+cout << "|       	             |" << endl;
+cout << "|       WATER WORKS         |" << endl;
 cout << "|  If one Utility is owned  |" << endl;
 cout << "|   rent is 4 times amount  |" << endl;
 cout << "|      shown on dice.       |" << endl;

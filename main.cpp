@@ -21,9 +21,12 @@ void setBoardRentHouse2(Board board[]);
 void setBoardRentHouse3(Board board[]);
 void setBoardRentHouse4(Board board[]);
 void setBoardRentHotel(Board board[]);
-void setBoardPropertyOwner(Board board[]);
+//void setBoardPropertyOwner(Board board[]);
+
 int rollDice();
-void movePlayer(Player player[], Board board[], int x); 
+void movePlayer(Player player[], Board board[], int playerID);
+void buyProperty(Player player[], Board board[], int playerID, int playerPosition); 
+void auction();
 
 int main(int argc, char** argv) 
 {
@@ -37,8 +40,9 @@ int main(int argc, char** argv)
 	setBoardRentHouse3(boardArray);
 	setBoardRentHouse4(boardArray);
 	setBoardRentHotel(boardArray);
-	setBoardPropertyOwner(boardArray); 
+//	setBoardPropertyOwner(boardArray); 
 	
+	string stringNumPlayers;
 	int numPlayers;
 	string playerName;
 	int roundNum;
@@ -46,7 +50,10 @@ int main(int argc, char** argv)
 	int maxNameLength = 10;     
 	int position;
 	
-	char selection; 																// Allows user to input a character selection.
+	bool endTurn = false;
+	bool diceRolled = false;
+	
+	string selection; 																// Allows user to input a character selection.
 	string turnSelection;
 	titleScreen();
 	
@@ -54,11 +61,11 @@ int main(int argc, char** argv)
     {
     	cout << "  Enter selection (B or E): "; 										// Prompt for user input. 
 	    cin >> selection; 																// Takes in players selection.      
-	    if ((selection == 'b') || (selection == 'B')) 									// If 'b' or 'B' was selected.
+	    if ((selection == "b") || (selection == "B")) 									// If 'b' or 'B' was selected.
 		{
 	    	break; 																		// It will break the loop and continue down to the player selection.
 		}
-		else if ((selection == 'e') || (selection == 'E')) 								// If 'e' or 'E' was selected
+		else if ((selection == "e") || (selection == "E")) 								// If 'e' or 'E' was selected
 		{
 	        system("PAUSE");
             return EXIT_SUCCESS; 														// Exits the program. 
@@ -67,14 +74,16 @@ int main(int argc, char** argv)
 
 	cout << endl;
 	cout << "How many players? (2-6)" << endl;											//asks how many players for game
-	cin >> numPlayers;
+	cin >> stringNumPlayers;
+
 	
-	while(numPlayers > 6 || numPlayers < 2) 											//if number of players is outside 2-6 asks to re-enter number of players
+	while(stringNumPlayers != "2" && stringNumPlayers != "3" && stringNumPlayers != "4" && stringNumPlayers != "5" && stringNumPlayers != "6")			//if number of players is outside 2-6 asks to re-enter number of players
 	{
 		cout << "Number of players must be between 2 and 6." << endl;
 		cout << "Please enter number of players." << endl;
-		cin >> numPlayers; 																//re-enters new value of numPlayers
+		cin >> stringNumPlayers; 														//re-enters new value of numPlayers
 	}
+	numPlayers = atoi(stringNumPlayers.c_str());										//converts string into integer and assign value to numPlayers
 	
 	Player playerArray[numPlayers]; 													//creates array of player instances
 
@@ -89,30 +98,65 @@ int main(int argc, char** argv)
 		}
 		playerArray[i].setName(playerName);												//sets name entered to attribute 'name' in player object 
 	}
-	
-	for(int i=0 ; i<numPlayers ; i++)
+	for ( ; ; )
 	{
-		system("cls");
-		monopolyHeading();
-		
-		cout << playerArray[i].getName() << "'s turn " << "(Player " << i+1 << " )." << endl;
-		cout << "--------------------------------------------------------------------------------" << endl;
-		
-		cout << "Money Available: $" << playerArray[i].getBalance() << endl;
-		cout << "You are at: " << boardArray[playerArray[i].getPosition()].getName() << endl;
-		cout <<"\nWhat would you like to do?" << endl;
-		vout << "(D) Declare Bankruptcy"
-		cout << "(R) Roll Dice." << endl;
-		cout << "(T) Trade." << endl;
-		cout << "(M) Manage Property" << endl;
-		cin >> turnSelection;
-		
-		if(turnSelection == "R" || turnSelection == "r")
+	
+		for(int i=0 ; i<numPlayers ; i++)
 		{
-			movePlayer(playerArray, boardArray, i);
+			while(endTurn == false)
+			{
+				system("cls");
+				monopolyHeading();
+				
+				cout << playerArray[i].getName() << "'s turn " << "(Player " << i+1 << " )." << endl;
+				cout << "--------------------------------------------------------------------------------" << endl;
+				
+				cout << "Money Available: $" << playerArray[i].getBalance() << endl;	//prints out player's balance
+				cout << "You are at: " << boardArray[playerArray[i].getPosition()].getName() << endl; //prints property player is at
+				cout <<"\nWhat would you like to do?" << endl;
+				cout << "(D) Declare Bankruptcy" << endl;								//options for the player for each turn
+				cout << "(R) Roll Dice." << endl;
+				cout << "(T) Trade." << endl;
+				cout << "(M) Manage Property" << endl;
+				cout << "(E) End turn" << endl;
+				cin >> turnSelection;													//reads in player input
+				
+				if(turnSelection == "R" || turnSelection == "r")						//if player wants to roll dice
+				{	
+					if(diceRolled == false)												//checks to see if player has already rolled dice for turn
+					{
+						diceRolled = true;												//bool to say dice has been rolled
+						movePlayer(playerArray, boardArray, i);							//function that calls upon rice rolling function and then moves player
+						buyProperty(playerArray, boardArray, i, playerArray[i].getPosition());	//checks if property is available to buy and allows player to purchase
+						if(boardArray[playerArray[i].getPosition()].getOwner() == -1 && boardArray[playerArray[i].getPosition()].getColour() != "NULL" ) //checks if property is able to be bought and if player did not buy it
+						{
+							auction();													//starts auction for available property
+						}
+					}
+					else
+					{
+						cout << "You have already rolled your dice for this turn." << endl;
+					}
+				}
+				if(turnSelection == "E" || turnSelection == "e")						//if player wants to end turn
+				{
+					if(diceRolled == false)												//makes player roll dice before they can end turn
+					{
+						cout << "NOT ALLOWED. You have not rolled your dice for this turn." << endl;
+					}
+					else
+					{
+						endTurn = true;													//breaks while loop for player turn
+					}
+				}
+				system("pause");
+			}
+			
+			endTurn = false;
+			diceRolled = false;
 		}
-		system("pause");
 	}
+	
 	system("pause");
 	return EXIT_SUCCESS;
 	
@@ -303,6 +347,7 @@ void setBoardRentHotel(Board board[])
 		board[i].setRentHotel(fileArray[i]);
 	}
 }
+/*
 void setBoardPropertyOwner(Board board[])
 {
 	ifstream file;
@@ -321,6 +366,7 @@ void setBoardPropertyOwner(Board board[])
 		board[i].setOwner(fileArray[i]);
 	}
 }
+*/
 int rollDice()
 {
 	srand(time(NULL));
@@ -328,28 +374,67 @@ int rollDice()
 	return randomNumber;
 }
 
-void movePlayer(Player player[], Board board[], int x)
+void movePlayer(Player player[], Board board[], int playerID)									//function to move player along board
 {
-	int i = x;
-	string buySelection;
-	int firstRoll = rollDice();
-	system("pause");
-	int secondRoll = rollDice();
+	int i = playerID;
+	int firstRoll = rollDice();																	//calls die rolling function for first die 
+	system("pause");																			//pause for time delay in seed for random number
+	int secondRoll = rollDice();																//calls die rolling function for second dice
 	int rollTotal = firstRoll + secondRoll;
 	cout << firstRoll << endl;
 	cout << secondRoll << endl;
 	
 	if(firstRoll == secondRoll)
 	{
-		player[i].setDoublesRolled(player[i].getDoublesRolled()+1);
+		player[i].setDoublesRolled(player[i].getDoublesRolled()+1);								//increases doubles rolled count by one
 	}
 	
-	player[i].setPosition(player[i].getPosition() + rollTotal);
-	if(player[i].getPosition() > 39)
+	player[i].setPosition(player[i].getPosition() + rollTotal);									//increases player position by total dice scored
+	if(player[i].getPosition() > 39)															//checks if position is beyond range of board
 	{
-		player[i].setPosition(player[i].getPosition() - 40);
+		player[i].setPosition(player[i].getPosition() - 40);									//resets position to revolve around board
 	}
-	cout << "You landed on: " << board[player[i].getPosition()].getName() << endl;
-	
-	//insert if they want to buy property //read in file property owner
+	cout << "You landed on: " << board[player[i].getPosition()].getName() << endl;				//prints property name of position
+}
+void buyProperty(Player player[], Board board[], int playerID, int playerPosition)				//function to ask if player wants to buy property
+{
+	int i = playerID;
+	string selection;
+
+	if(board[playerPosition].getColour() != "NULL" && board[playerPosition].getOwner() == -1)	//checks if property is a type that can be bought and if another player owns
+	{
+		cout << "Would you like to buy this property?(Y/N)" << endl;							
+		cin >> selection;																		//user input to buy property
+		while(selection != "Y" && selection != "y" && selection != "N" && selection != "n")		//checks if user input is valid (Y/N) || (y/n)
+		{
+			cout << "Invalid Selection. Would you like to buy this property? (Y/N)" << endl;
+			cin >> selection;																	//reads in user input to buy property
+		}	
+		if(selection == "Y" || selection == "y")												//if player wants to buy
+		{
+			if(board[playerPosition].getBuyPrice() > player[i].getBalance())					//checks if player has enough money
+			{
+				cout << "You cannot afford this property." << endl;
+			}
+			else
+			{
+				player[i].setBalance(player[i].getBalance() - board[playerPosition].getBuyPrice());	//deducts price of property from user
+				board[playerPosition].setOwner(i);												//sets onwner of property using player primary key
+				cout << "Property Bought" << endl;
+			}
+		}
+	}
+	else if (board[playerPosition].getColour() != "NULL")										//if property is onwned by another player
+	{
+		cout << "Property Taken" << endl;
+	}
+	else
+	{
+		cout << "NULL Property" << endl;
+
+	}
+}
+void auction()																					//function to auction property
+{
+	cout << "Auction function" << endl;
 }

@@ -46,3 +46,10 @@ Jackson:
 4/07/2015
 Jackson:
  - Roll is able to be rolled and print on screen where player has been moved to (movePlayer function.
+
+18/07/15
+Jackson:
+ -Buy property function made and running
+ -Loop made so player cannot end turn until dice have been rolled
+ -Error checking of number of players entered by user is not in range or not numerical
+ -Stub made for auction function

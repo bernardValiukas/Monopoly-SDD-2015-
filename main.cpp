@@ -1,5 +1,4 @@
 //made prime read to ensure all cards and info is there
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -21,12 +20,14 @@ void setBoardRentHouse2(Board board[]);
 void setBoardRentHouse3(Board board[]);
 void setBoardRentHouse4(Board board[]);
 void setBoardRentHotel(Board board[]);
-//void setBoardPropertyOwner(Board board[]);
 
 int rollDice();
 void movePlayer(Player player[], Board board[], int playerID);
 void buyProperty(Player player[], Board board[], int playerID, int playerPosition); 
-void auction();
+void auction(Player player[], Board board[], int numberPlayers, int propertyPosition);
+void trade();
+void manageProperty();
+void rent(Player player[], Board board[], int playerID);
 
 int main(int argc, char** argv) 
 {
@@ -39,8 +40,7 @@ int main(int argc, char** argv)
 	setBoardRentHouse2(boardArray);
 	setBoardRentHouse3(boardArray);
 	setBoardRentHouse4(boardArray);
-	setBoardRentHotel(boardArray);
-//	setBoardPropertyOwner(boardArray); 
+	setBoardRentHotel(boardArray); 
 	
 	string stringNumPlayers;
 	int numPlayers;
@@ -127,16 +127,30 @@ int main(int argc, char** argv)
 					{
 						diceRolled = true;												//bool to say dice has been rolled
 						movePlayer(playerArray, boardArray, i);							//function that calls upon rice rolling function and then moves player
+						if(boardArray[playerArray[i].getPosition()].getOwner() != -1 && boardArray[playerArray[i].getPosition()].getOwner() != i) // checks if property is owner and player themself doesn't own it
+						{
+							cout << "Call to rent Function" << endl;
+							rent(playerArray, boardArray, i);							//calls rent function
+						}
 						buyProperty(playerArray, boardArray, i, playerArray[i].getPosition());	//checks if property is available to buy and allows player to purchase
 						if(boardArray[playerArray[i].getPosition()].getOwner() == -1 && boardArray[playerArray[i].getPosition()].getColour() != "NULL" ) //checks if property is able to be bought and if player did not buy it
 						{
-							auction();													//starts auction for available property
+							auction(playerArray, boardArray, numPlayers, playerArray[i].getPosition());		//starts auction for available property
 						}
 					}
 					else
 					{
 						cout << "You have already rolled your dice for this turn." << endl;
 					}
+				}
+				
+				if(turnSelection == "T" || turnSelection == "t")						//if player wants to trade
+				{
+					trade();
+				}
+				if(turnSelection == "M" || turnSelection == "m")						//if player wants to manage property
+				{
+					manageProperty();
 				}
 				if(turnSelection == "E" || turnSelection == "e")						//if player wants to end turn
 				{
@@ -152,8 +166,8 @@ int main(int argc, char** argv)
 				system("pause");
 			}
 			
-			endTurn = false;
-			diceRolled = false;
+			endTurn = false;															//resets endTurn for next player
+			diceRolled = false;															//resets diceRolled for next player
 		}
 	}
 	
@@ -293,7 +307,7 @@ void setBoardRentHouse2(Board board[])													//sets rent for 2 houses of a
 		board[i].setRentHouse2(fileArray[i]);
 	}
 }
-void setBoardRentHouse3(Board board[])
+void setBoardRentHouse3(Board board[])													//sets rent for 3 houses of all instances - read in from file
 {
 	ifstream file;
 	file.open("txts/propertyRentThreeHouse.txt");
@@ -311,7 +325,7 @@ void setBoardRentHouse3(Board board[])
 		board[i].setRentHouse3(fileArray[i]);
 	}
 }
-void setBoardRentHouse4(Board board[])
+void setBoardRentHouse4(Board board[])												//sets rent for 4 houses for all instances - read in from file
 {
 	ifstream file;
 	file.open("txts/propertyRentFourHouse.txt");
@@ -329,7 +343,7 @@ void setBoardRentHouse4(Board board[])
 		board[i].setRentHouse4(fileArray[i]);
 	}
 }
-void setBoardRentHotel(Board board[])
+void setBoardRentHotel(Board board[])												//sets rent for a hotel for all instanes - read in from file
 {
 	ifstream file;
 	file.open("txts/propertyRentHotel.txt");
@@ -347,29 +361,10 @@ void setBoardRentHotel(Board board[])
 		board[i].setRentHotel(fileArray[i]);
 	}
 }
-/*
-void setBoardPropertyOwner(Board board[])
+
+int rollDice()																		//creates random number between 1-6 for die
 {
-	ifstream file;
-	file.open("txts/propertyOwner.txt");
-	string fileArray[40];
-	if(file.is_open())
-	{
-		for(int i=0 ; i<40 ; i++)
-		{
-			file >> fileArray[i];
-		}
-	}
-	file.close();
-	for(int i=0 ; i<40 ; i++)
-	{
-		board[i].setOwner(fileArray[i]);
-	}
-}
-*/
-int rollDice()
-{
-	srand(time(NULL));
+	srand(time(NULL));																//uses time as a seed to made number
 	int randomNumber = rand() % 6 + 1;
 	return randomNumber;
 }
@@ -434,7 +429,96 @@ void buyProperty(Player player[], Board board[], int playerID, int playerPositio
 
 	}
 }
-void auction()																					//function to auction property
+void auction(Player player[], Board board[], int numberPlayers, int propertyPosition)					//function to auction property
+{																										//
+	int playersOut = 0;																					//players that have forfeited
+	int playerBid =0;
+	int highestBid =9;																					//bids entered have to be at least 10
+	int winningID = 0;																					//playerID of current winner of auction
+	bool firstRound = false;																			
+	bool propertySold = false;
+	
+	while(propertySold == false)																		//loop that continues until property is sold or no one is interested
+	{	
+		for(int i = 0; i<numberPlayers; i++)															//player loop
+		{
+			if(playersOut == numberPlayers-1 && firstRound == true)										//all players execept one have forfeited and that it is past first round
+			{
+				cout << endl;
+				cout << player[winningID].getName() << " (Player " << winningID+1 << ")"<< " bought the property for $" << highestBid << "."<< endl;
+				propertySold = true;																	//property has been successfully auctioned
+				board[propertyPosition].setOwner(winningID);											//assigns owner of property to ID of winner
+				player[winningID].setBalance(player[winningID].getBalance() - highestBid);				//deducts bid from winners account
+				break;																					//break player loop
+			}
+			if(player[i].getAuctionFlag() == 0)															//checks if player has not surrended 
+			{
+				system("cls");
+				monopolyHeading();
+				cout << "AUCTION - " << "Starting bid MUST be $10.     " << "Property Available: " << board[propertyPosition].getName() << endl;
+				cout << "--------------------------------------------------------------------------------" << endl;
+				cout << player[i].getName() << "'s turn. " << "(Player " << i+1 << ")"<< endl;
+				if(highestBid != 9)
+				{
+					cout << "Highest Bid: $" << highestBid << endl; 									//tells user of current wining bid
+				}
+				cout << "What would you like to bid? (0 means leaves auction)" <<endl;
+				cout << "Money Available: $" << player[i].getBalance() << endl;
+				cin >> playerBid;
+
+				while(playerBid > player[i].getBalance())												//loop to check if player can afford bid
+				{
+					cout << "You cannot afford this offer. (Please enter a lower bid)" << endl;
+					cin >> playerBid;																	//re-reads player input
+				}
+				while(playerBid <= highestBid && playerBid !=0)											//checks if bid is greater than highest bid and is not a surrender
+				{
+					cout << "Bid is not high enough. Please enter higher bid." << endl;
+					cin >> playerBid;
+				}
+				if(playerBid == 0)																		//checks if player wants to surrender
+				{
+					cout << "You have left the auction." << endl;
+					player[i].setAuctionFlag(true);														//sets flag to say user is out of auction
+					playersOut = playersOut+1;															//increments player out by one
+				}
+				else																					//successful bid
+				{
+					cout << "You have highest bid."  << endl;
+					highestBid = playerBid;																//assigns highest bid to what user entered
+					winningID = i ;																		//sets current winner to the ID of player
+				}
+			}
+			if(i == numberPlayers-1)																	//used to make sure last player of first round of auction doesn't automatically get property
+			{
+				firstRound = true;																		//flags first round has happened
+			}
+			system("pause");
+		}
+		
+		if (playersOut == numberPlayers)																//checks if no players want the auctioned property
+		{
+			cout << "Property was not sold." << endl;
+			break;																						//breaks while loop because property was unable to be sold
+		}
+		for(int i=0 ;  i<numberPlayers ; i++)															//resets the auction flag for players for the next auction
+		{
+			player[i].setAuctionFlag(false);
+		}
+	}
+}
+
+void trade()
 {
-	cout << "Auction function" << endl;
+	cout << "Trade Function." << endl;
+}
+
+void manageProperty()
+{
+	cout << "Manage Property function." << endl;
+}
+
+void rent(Player player[], Board board[], int playerID)
+{
+	cout << "Rent Function." << endl;
 }

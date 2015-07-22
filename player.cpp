@@ -1,3 +1,4 @@
+//create array that lists propeties owned
 #include <iostream>
 #include <cstdlib>
 #include "player.h"
@@ -9,6 +10,8 @@ Player::Player() 																		//creates preset values for player attributes
 	jailCards = 0;
 	position = 0;
 	doublesRolled = 0;
+	auctionFlag = false;
+	
 }
 
 void Player::setBalance(int playerBalance)
@@ -55,12 +58,22 @@ int Player::getDoublesRolled()															//access number of doubles rolled f
 	return doublesRolled;
 }
 
+void Player::setAuctionFlag(bool playerAuctionFlag)
+{
+	auctionFlag = playerAuctionFlag;
+}
 
+bool Player::getAuctionFlag()
+{
+	return auctionFlag;
+}
 
+void Player::setBankruptFlag(bool playerBankruptFlag)
+{
+	bankruptFlag = playerBankruptFlag;
+}
 
-
-
-
-
-
-
+bool Player::getBankruptFlag()
+{
+	return bankruptFlag;
+}

@@ -16,6 +16,10 @@ class Player
 		int getJailCards;																//access number of jail cards for player
 		void setDoublesRolled(int turnDoublesRolled);									//sets number of doubles rolled for player
 		int getDoublesRolled();															//access doubles rolled
+		void setAuctionFlag(bool playerAuctionFlag);
+		bool getAuctionFlag();
+		void setBankruptFlag(bool playerBankruptFlag);
+		bool getBankruptFlag();
 		
 	private:																			//attributes of player instances (MUST use player functions to view or change values)
 		string name;
@@ -24,4 +28,6 @@ class Player
 		int turn;
 		int jailCards;
 		int doublesRolled;
+		bool auctionFlag;
+		bool bankruptFlag;
 };

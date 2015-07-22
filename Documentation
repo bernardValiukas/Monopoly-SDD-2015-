@@ -53,3 +53,14 @@ Jackson:
  -Loop made so player cannot end turn until dice have been rolled
  -Error checking of number of players entered by user is not in range or not numerical
  -Stub made for auction function
+
+21/07/15
+Jackson:
+ -Auction Function working with basic layout.
+  -Assigns property to owner and deducts bid from balance
+
+22/07/15
+ -Auction Function with proper layout and continous update of current winning bid.
+ -Stub made for rent function, trade function and manage property function.
+ -Mortgage flag made for board class
+ -Bankrupt flag made for player class

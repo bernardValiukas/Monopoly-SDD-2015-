@@ -64,3 +64,8 @@ Jackson:
  -Stub made for rent function, trade function and manage property function.
  -Mortgage flag made for board class
  -Bankrupt flag made for player class
+ 
+ 24/07/2015
+  - Finished sorting properties and sorted into order
+  - worked on jail functions
+  - discussed re-allocation of roles

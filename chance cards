@@ -1,0 +1,251 @@
+#include <iostream>
+
+// ASCII BY AMELIA PATON.
+using namespace std;
+
+int main(int argc, char** argv) 
+{
+
+    // card 1 
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|     | |     | |     | |     | |     |" << endl;
+    cout << "|     | |    / /       \\ \\    | |     |" << endl;
+    cout << "|     | |   / /         \\ \\   | |     |" << endl;
+    cout << "|     | |  | |           | |  | |     |" << endl;         
+    cout << "|     | |  \\ \\          / /   | |     |" << endl;
+    cout << "|     | |   \\ \\        / /    | |     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|     This card may be kept until     |" << endl;
+    cout << "|         needed or traded.           |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    // card 2
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|    ADVANCE TO THE NEAREST STATION.  |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|     If UNOWNED, you may buy it      |" << endl;
+    cout << "|           from the Bank.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|     If OWNED, pay owner twice       |" << endl;
+    cout << "|      the rental to which they       |" << endl;
+    cout << "|       are otherwise entitled.       |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 3
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|    ADVANCE TO THE NEAREST STATION.  |" << endl;
+    cout << "|                                     |" << endl;    // CHECK TO SEE IF ACTUALLY DOUBLE UP OR NOT.
+    cout << "|     If UNOWNED, you may buy it      |" << endl;
+    cout << "|           from the Bank.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|     If OWNED, pay owner twice       |" << endl;
+    cout << "|      the rental to which they       |" << endl;
+    cout << "|       are otherwise entitled.       |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    // card 4
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|               GO BACK               |" << endl;
+    cout << "|            THREE SPACES.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 5
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|          SPEEDING FINE $15          |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 6
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|           TAKE A TRIP TO            |" << endl;
+    cout << "|        KINGS CROSS STATION.         |" << endl;
+    cout << "|           IF YOU PASS GO,           |" << endl;
+    cout << "|            COLLECT $200.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 7
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|             ADVANCE TO              |" << endl;
+    cout << "|              MAYFAIR.               |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+ 
+    // card 8
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|        YOU HAVE BEEN ELECTED        |" << endl;
+    cout << "|        CHAIRMAN OF THE BOARD.       |" << endl;
+    cout << "|         PAY EACH PLAYER $50.        |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 9
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|             ADVANCE TO              |" << endl;
+    cout << "|             PALL MALL.              |" << endl;
+    cout << "|           IF YOU PASS GO,           |" << endl;
+    cout << "|            COLLECT $200.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 10
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|             ADVANCE TO              |" << endl;
+    cout << "|       THE NEAREST UTILIlITY.        |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|       If UNOWNED, you may           |" << endl;
+    cout << "|      buy it from the Bank.          |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|       If OWNED, throw dice          |" << endl;
+    cout << "|      and pay owner 10 times         |" << endl;
+    cout << "|        the amount thrown.           |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 11
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|             ADVANCE TO              |" << endl;
+    cout << "|          TRAFALGAR SQUARE.          |" << endl;
+    cout << "|           IF YOU PASS GO,           |" << endl;
+    cout << "|            COLLECT $200.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    // card 12
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|           YOUR BUILDING             |" << endl;
+    cout << "|           LOAN MATURES.             |" << endl;
+    cout << "|           COLLECT $150.             |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    //card 13
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|   ________________________________  |" << endl;
+    cout << "|    ||     ||     ||     ||     ||   |" << endl;
+    cout << "|    ||     ||     ||     ||     ||   |" << endl;
+    cout << "|    ||     ||     ||     ||     ||   |" << endl;
+    cout << "|    ||     ||     ||     ||     ||   |" << endl;
+    cout << "|    ||     ||     ||     ||     ||   |" << endl;
+    cout << "|   _||_____||_____||_____||_____||_  |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|  GO TO JAIL. GO DIRECTLY TO JAIL,   |" << endl;
+    cout << "| DO NOT PASS GO, DO NOT COLLECT $200.|" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 14
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|           ADVANCE TO GO.            |" << endl;
+    cout << "|           (COLLECT $200)            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // card 15
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|        MAKE GENERAL REPAIRS         |" << endl;
+    cout << "|        ON ALL YOUR PROPERTY:        |" << endl;
+    cout << "|       FOR EACH HOUSE PAY $25,       |" << endl;
+    cout << "|       FOR EACH HOTEL PAY $100.      |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    //card 16
+    cout << "|-------------------------------------|" << endl;
+    cout << "|               CHANCE                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|            BANK PAYS YOU            |" << endl;
+    cout << "|           DIVIDEND OF $50.          |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    system("PAUSE");
+	return 0;
+}

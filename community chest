@@ -1,0 +1,239 @@
+    //card 1
+	  cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|            HOSPITAL FEES.           |" << endl;
+    cout << "|               PAY $100              |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+	
+    // CARD 2
+	  cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|       LIFE INSURANCE MATURES.       |" << endl;
+    cout << "|            COLLECT $100.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+	
+  	// CARD 3
+  	cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|             RECIEVE $25             |" << endl;
+    cout << "|           CONSULTANCY FEE.          |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+	
+    // CARD 4
+    cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|          INCOME TAX REFUND.         |" << endl;
+    cout << "|             COLLECT $20.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+	
+	  // CARD 5
+	  cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|              BANK ERROR             |" << endl;
+    cout << "|            IN YOUR FAVOUR.          |" << endl;
+    cout << "|             COLLECT $200.           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+	
+  	// CARD 6
+	  cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|            ADVANCE TO GO.           |" << endl;
+    cout << "|            (COLLECT $200)           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    // CARD 7
+    cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|     | |     | |     | |     | |     |" << endl;
+    cout << "|     | |     | |     | |     | |     |" << endl;
+    cout << "|     | |     | |     | |     | |     |" << endl;
+    cout << "|     | |     | |     | |     | |     |" << endl;
+    cout << "|     | |     | |     | |     | |     |" << endl;
+    cout << "|     | |     | |     | |     | |     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "| GO TO JAIL. GO DIRECTLY TO JAIL, DO |" << endl;
+    cout << "|  NOT PASS GO, DO NOT COLLECT $200.  |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    // CARD 8
+    cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|         IT IS YOUR BIRTHDAY         |" << endl;
+    cout << "|             COLLECT $10             |" << endl;
+    cout << "|          FROM EVERY PLAYER.         |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    // CARD 9
+    cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+	  cout << "|                                     |" << endl;
+    cout << "|     | |     | |     | |     | |     |" << endl;
+    cout << "|     | |    / /       \\ \\    | |     |" << endl;
+    cout << "|     | |   / /         \\ \\   | |     |" << endl;
+    cout << "|     | |  | |           | |  | |     |" << endl;         
+    cout << "|     | |  \\ \\          / /   | |     |" << endl;
+    cout << "|     | |   \\ \\        / /    | |     |" << endl;
+    cout << "|         GET OUT OF JAIL FREE.       |" << endl;
+    cout << "|     This card may be kept until     |" << endl;
+    cout << "|         needed or traded.           |" << endl;
+    cout << "|-------------------------------------|" << endl;
+	
+  	// CARD 10
+  	cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|             DOCTORS FEES            |" << endl;
+    cout << "|               PAY $50.              |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+
+    // CARD 11
+  	cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|             SCHOOL FEES             |" << endl;
+    cout << "|               PAY $50.              |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;	
+    
+    // CARD 12
+  	cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|         HOLIDAY FUND MATURES        |" << endl;
+    cout << "|             RECIEVE $100.           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+	
+  	// CARD 13
+  	cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|             YOU INHERIT             |" << endl;
+    cout << "|                $100.                |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+	
+	  // CARD 14
+	  cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|          FROM SALE OF STOCK         |" << endl;
+    cout << "|             YOU GET $50.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    // CARD 15
+	  cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|            YOU HAVE WON             |" << endl;
+    cout << "|           SECOND PRIZE IN           |" << endl;
+    cout << "|          A BEAUTY CONTEST.          |" << endl;
+    cout << "|             COLLECT $10.            |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;
+    
+    // CARD 16
+	  cout << "|-------------------------------------|" << endl;
+    cout << "|           COMMUNITY CHEST           |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|           YOU ARE ASSESSED          |" << endl;
+    cout << "|          FOR STREET REPAIRS.        |" << endl;
+    cout << "|         PAY $40 PER HOUSE AND       |" << endl;
+    cout << "|        $115 PER HOTEL YOU OWN.      |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|                                     |" << endl;
+    cout << "|-------------------------------------|" << endl;

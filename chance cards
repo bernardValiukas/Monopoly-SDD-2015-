@@ -16,7 +16,7 @@ int main(int argc, char** argv)
     cout << "|     | |  | |           | |  | |     |" << endl;         
     cout << "|     | |  \\ \\          / /   | |     |" << endl;
     cout << "|     | |   \\ \\        / /    | |     |" << endl;
-    cout << "|                                     |" << endl;
+    cout << "|         GET OUT OF JAIL FREE.       |" << endl;
     cout << "|     This card may be kept until     |" << endl;
     cout << "|         needed or traded.           |" << endl;
     cout << "|-------------------------------------|" << endl;

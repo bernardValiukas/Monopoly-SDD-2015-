@@ -60,7 +60,7 @@ Jackson:
   -Assigns property to owner and deducts bid from balance
 
 22/07/15
- -Auction Function with proper layout and continous update of current winning bid.
+ -Auction Function with proper layout and continuous update of current winning bid.
  -Stub made for rent function, trade function and manage property function.
  -Mortgage flag made for board class
  -Bankrupt flag made for player class

@@ -113,6 +113,43 @@ int main(int argc, char *argv[])
             return EXIT_SUCCESS; // Exits the program. 
 		}
 		
+		else if ((selection == 'i') || (selection == 'I')) // If 'e' or 'E' was selected
+		{
+	        system("CLS");
+	        cout << "--------------------------------------------------------------------------------" << endl;
+	        cout << "                                 == MONOPOLY ==                                 " << endl;
+	        cout << "                               == INSTRUCTIONS ==                               " << endl;
+			cout << "--------------------------------------------------------------------------------" << endl;
+			cout << "                                                                                " << endl;
+			cout << " SET IT UP!                                                                     " << endl;
+			cout << "  Give each player: 5x $1, 1x $5, 2x $10, 1x $20, 1x $50, 4x $100, 2x $500      " << endl;
+			cout << "  a total of $1500).                                                            " << endl;
+			cout << "  Shuffle the chance cards and the community chest cards.                       " << endl;
+			cout << "                                                                                " << endl;
+			cout << " PLAY!                                                                          " << endl;
+			cout << "  How to win: Move around the board buying as many properties (Streets, Railway " << endl;
+			cout << "  Stations and Utillities) as you can. The more you own, the more rent you'll   " << endl;
+			cout << "  get. If you're the last player with any money when all other players have     " << endl;
+			cout << "  gone bankrupt, you win!                                                       " << endl;
+			cout << "                                                                                " << endl;
+			cout << " WHO GOES FIRST?                                                                " << endl;
+			cout << "  Each player rolls both white dice. The highest roller starts.                 " << endl;
+			cout << "                                                                                " << endl;
+			cout << " ON YOUR TURN!                                                                  " << endl;
+			cout << "  (1) Roll both white dice.                                                     " << endl;
+			cout << "  (2) Move forward that number of spaces.                                       " << endl;
+			cout << "  (3) Where did you land?                                                       " << endl;
+			cout << "  (4) If you rolled a double, roll the dice again, and take another turn.       " << endl;
+			cout << "      WATCH OUT! If you roll a double 3 times in the smae turn, you must go     " << endl;
+			cout << "      to jail!                                                                  " << endl;
+			cout << "  (5) Your turn is over. The player in your left goes next.                     " << endl;
+			cout << "                                                                                " << endl;
+			cout << " START PLAYING!                                                                 " << endl;
+			cout << "  That's all you need to know, so get going!                                    " << endl;
+			cout << "                                                                                " << endl;
+			cout << "--------------------------------------------------------------------------------" << endl;
+			system("PAUSE");
+		}
 		else // If the entered selection was invalid.
 		{
 			// Enter selection again.

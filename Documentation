@@ -76,3 +76,10 @@ Jackson:
 
 4/08/2015
 Amelia: Completed ascii for community chest cards. (uploaded 6/08/2015)
+
+12/08/25
+Jackson: 
+- Rent function working (needs to double if colour group owned and property management if cant afford to pay)
+- Trade function working but needs layout to be worked on
+- Function to see if colour group owned and stations/utilities a player has.
+- Mortgage and unmortgage files added to board class through read in

@@ -83,3 +83,14 @@ Jackson: (new work not put on github yet)
 - Trade function working but needs layout to be worked on
 - Function to see if colour group owned and stations/utilities a player has.
 - Mortgage and unmortgage files added to board class through read in
+
+16/08/15
+Jackson
+-function made to check if player owns colour group through board variable
+-Function made to check if a string is numeric or not
+-Error checking done for bad input where any numeric input is required
+-Fucntions made to see if a property can have a house bought/sold
+-Basic design and mechanics made for manage property function
+-Rent can be doubled if colour group owned
+-File read in for house cost
+-ASCII property function implemented

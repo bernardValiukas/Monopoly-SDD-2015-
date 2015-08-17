@@ -10,6 +10,37 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+ /*	    cout << "|----------------------------------|" << endl;
+            cout << "|                                  |" << endl;
+            cout << "|          ___________             |" << endl;
+            cout << "|         //   |||   \\\\            |" << endl;
+            cout << "|      __//____|||____\\\\____       |" << endl;
+            cout << "|     | _|      |       _  ||      |" << endl;
+            cout << "|     |/ \\______|______/ \\_||      |" << endl;
+            cout << "|      \\_/_____________\\_/         |" << endl;
+            cout << "|                                  |" << endl;
+            cout << "|                                  |" << endl;
+            cout << "|           FREE PARKING           |" << endl;
+            cout << "|                                  |" << endl;
+            cout << "|                                  |" << endl;
+            cout << "|----------------------------------|" << endl;
+            
+	    cout << "|----------------------------------|" << endl;
+            cout << "|  ||  ||  ||  ||  ||  ||          |" << endl;
+            cout << "|  ||  ||  ||__||  ||  ||    J     |" << endl;
+            cout << "|  ||  ||  |    |  ||  ||          |" << endl;
+            cout << "|  ||  ||  | IN |  ||  ||    U     |" << endl;
+            cout << "|  ||  ||  |JAIL|  ||  ||          |" << endl;
+            cout << "|  ||  ||  | __ |  ||  ||    S     |" << endl;
+            cout << "|  ||  ||  ||  ||  ||  ||          |" << endl;
+            cout << "|  ||  ||  ||  ||  ||  ||    T     |" << endl;
+            cout << "|__||__||__||__||__||__||          |" << endl;
+            cout << "|                                  |" << endl;
+            cout << "|    V I S I T I N G               |" << endl;
+            cout << "|                                  |" << endl;
+            cout << "|----------------------------------|" << endl;
+            
+    */        
         if (board[i].getName() == "GO")
 	{
             // GO

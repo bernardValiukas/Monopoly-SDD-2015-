@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
             
                 cout << "|---------------------------|" << endl;
 		cout << "|                           |" << endl;
-		cout << "|                           |" << endl;
+		cout << "|         SUPER TAX         |" << endl;
 		cout << "|                           |" << endl;
 		cout << "|           ,==.            |" << endl;
 		cout << "|           \\\\//          |" << endl;
@@ -53,10 +53,44 @@ int main(int argc, char *argv[])
 		cout << "|       ". `,",-" ,"        |" << endl;
 		cout << "|          '-~~-'           |" << endl;
 		cout << "|                           |" << endl;
-		cout << "|                           |" << endl;
+		cout << "|         PAY $100          |" << endl;
 		cout << "|                           |" << endl;
 		cout << "|---------------------------|" << endl;
-            
+		
+		cout << "|---------------------------|" << endl;
+		cout << "|                           |" << endl;
+		cout << "|        INCOME TAX         |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|            /\\             |" << endl;
+		cout << "|            \\/             |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|         PAY $200          |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|---------------------------|" << endl; 
+		
+		cout << "|---------------------------|" << endl;
+		cout << "|                           |" << endl;
+		cout << "|          CHANCE           |" << endl;
+		cout << "|          ______           |" << endl;
+		cout << "|         / ___  \\          |" << endl;
+		cout << "|        / /   \\  |         |" << endl;
+		cout << "|        |_|    | |         |" << endl;
+		cout << "|               | |         |" << endl;
+		cout << "|              / /          |" << endl;
+		cout << "|             / /           |" << endl;
+		cout << "|            / /            |" << endl;
+		cout << "|           |_|             |" << endl;
+		cout << "|            _              |" << endl;
+		cout << "|           |_|             |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|---------------------------|" << endl; 
+		
                 cout << "|---------------------------|" << endl;
 		cout << "|                           |" << endl;
 		cout << "|        COMMUNITY          |" << endl;

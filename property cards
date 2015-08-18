@@ -56,7 +56,24 @@ int main(int argc, char *argv[])
 		cout << "|                           |" << endl;
 		cout << "|                           |" << endl;
 		cout << "|---------------------------|" << endl;
-    */        
+            
+                cout << "|---------------------------|" << endl;
+		cout << "|                           |" << endl;
+		cout << "|        COMMUNITY          |" << endl;
+		cout << "|          CHEST            |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|           _____________ _ |" << endl;
+		cout << "|          / /          / / |" << endl;
+		cout << "|         / /          / /  |" << endl;
+		cout << "|   _____/_/_________/_/    |" << endl;
+		cout << "|  |    __     |     |      |" << endl;
+		cout << "|  |---{__}----| [ ] |      |" << endl;
+		cout << "|  |___________|_____|      |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|---------------------------|" << endl;   
+    
         if (board[i].getName() == "GO")
 	{
             // GO

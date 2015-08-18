@@ -40,6 +40,22 @@ int main(int argc, char *argv[])
             cout << "|                                  |" << endl;
             cout << "|----------------------------------|" << endl;
             
+                cout << "|---------------------------|" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|           ,==.            |" << endl;
+		cout << "|           \\\\//          |" << endl;
+		cout << "|          .-~~-.           |" << endl;
+		cout << "|        ,",-""-.".         |" << endl;
+		cout << "|       | |      | |        |" << endl;
+		cout << "|       | |      | |        |" << endl;
+		cout << "|       ". `,",-" ,"        |" << endl;
+		cout << "|          '-~~-'           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|                           |" << endl;
+		cout << "|---------------------------|" << endl;
     */        
         if (board[i].getName() == "GO")
 	{

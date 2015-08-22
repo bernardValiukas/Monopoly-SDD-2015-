@@ -32,6 +32,14 @@ class Board
 		int getOwner();
 		void setMortgageFlag(bool propertyMortgageFlag);
 		bool getMortgageFlag();
+		void setMortgageValue(int propertyMortgageValue);
+		int getMortgageValue();
+		void setUnMortgageValue(int propertyUnMortgageValue);
+		int getUnMortgageValue();
+		void setHouseCost(int propertyHouseCost);
+		int getHouseCost();		
+		void setColourRentFlag(bool propertyColourRentFlag);
+		bool getColourRentFlag();
 		
 	private:																			//attributes of board instances (MUST use board functions to view or change values)
 		bool saleStatus;
@@ -47,8 +55,9 @@ class Board
 		int rentHotel;
 		int owner;
 		bool mortgageFlag;
-		
 		int mortgageValue;
-		int unMortgageValue;		
+		int unMortgageValue;
+		int houseCost;		
+		bool colourRentFlag;		
 		
 };

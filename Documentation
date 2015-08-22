@@ -94,3 +94,30 @@ Jackson
 -Rent can be doubled if colour group owned
 -File read in for house cost
 -ASCII property function implemented
+
+17/08/15
+Jackson
+-chance and community chest
+-chance and community chest ascii implemented
+
+18/08/15
+Jackson
+-Error checking for all functions done (e.g. letter entered where it should be a number)
+-Bankrupt function
+-Bug fixed in income tax calculation
+
+19/08/15
+-Error where doubled rent applied for utility/station from chance
+-Jail cards made part of trading
+-Proper layout made for manage property and trade.
+
+20/08/15
+-Bugs fixed in chance
+-Property Worth attribute made for player
+-Bug fixed for income tax
+
+22/08/15
+Jackson
+-Jail options made into function
+-Final commenting on code done
+-Rent calculation on utility fixed

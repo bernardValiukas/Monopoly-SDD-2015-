@@ -11,6 +11,8 @@ Board::Board()
 	saleStatus = false;
 	houses = 0;
 	owner = -1;
+	colourRentFlag = false;
+	mortgageFlag = false;
 }
 
 void Board::setSaleStatus(bool propertySaleStatus)
@@ -128,4 +130,40 @@ void Board::setMortgageFlag(bool propertyMortgageFlag)
 bool Board::getMortgageFlag()
 {
 	return mortgageFlag;
+}
+
+void Board::setMortgageValue(int propertyMortgageValue)
+{
+	mortgageValue = propertyMortgageValue;
+}
+int Board::getMortgageValue()
+{
+	return mortgageValue;
+}
+
+void Board::setUnMortgageValue(int propertyUnMortgageValue)
+{
+	unMortgageValue = propertyUnMortgageValue;
+}
+int Board::getUnMortgageValue()
+{
+	return unMortgageValue;
+}
+
+void Board::setHouseCost(int propertyHouseCost)
+{
+	houseCost = propertyHouseCost;
+}
+int Board::getHouseCost()
+{
+	return houseCost;
+}
+
+void Board::setColourRentFlag(bool propertyColourRentFlag)
+{
+	colourRentFlag = propertyColourRentFlag;
+}
+bool Board::getColourRentFlag()
+{
+	return colourRentFlag;
 }
